@@ -49,6 +49,6 @@ end
 
 Then /^I should see all of the movies$/ do
   movies_count = Movie.all.count
-  rows = page.all(:css, 'table tbody tr')
-  assert rows_count = movies_count
+  rows = page.all(:css, 'table tbody tr').count
+  assert rows == movies_count
 end
